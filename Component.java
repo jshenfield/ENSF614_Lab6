@@ -2,8 +2,8 @@
  * File Name: Component.java
  * M. Moussavi, October 2024
  * Lab Section: B01
- * Completed by: Jack Shenfield & William Watson
- * Submission Date: Oct 29, 2025
+ * Completed by: Jack Shenfield
+ * Submission Date: November 4th, 2025
  */
 
 import java.awt.Graphics;

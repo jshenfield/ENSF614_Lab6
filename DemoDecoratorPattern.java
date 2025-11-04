@@ -13,6 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class DemoDecoratorPattern extends JPanel {
+	private static final long serialVersionUID = 1L; // recommended solution from eclipse error message I was getting.
 	Component t;
 
 	public DemoDecoratorPattern() {
@@ -30,7 +31,7 @@ public class DemoDecoratorPattern extends JPanel {
 		// Now lets add a ColouredFrameDecorator with x = 25, y = 25, width = 110,
 		// height = 110,
 		// and thickness = 10.
-		t = new ColouredFrameDecorator(t, 25, 25, 110, 110, 10);
+		t = new ColourFrameDecorator(t, 25, 25, 110, 110, 10);
 
 		// Now lets draw the product on the screen
 		t.draw(g);
