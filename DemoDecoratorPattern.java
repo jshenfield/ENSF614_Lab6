@@ -1,4 +1,4 @@
-/* ENSF 614 - Lab 6 Exercise A 
+/* ENSF 614 - Lab 6 Exercise A/B
  * File Name: DemoDecoratorPattern.java
  * M. Moussavi, October 2024
  * Lab Section: B01
@@ -23,17 +23,10 @@ public class DemoDecoratorPattern extends JPanel {
 	public void paintComponent(Graphics g) {
 		int fontSize = 10;
 		g.setFont(new Font("TimesRoman", Font.PLAIN, fontSize));
-
-		// Now lets decorate t with BorderDecorator: x = 30, y = 30, width = 100, and
-		// height 100
-		t = new BorderDecorator(t, 30, 30, 100, 100);
-
-		// Now lets add a ColouredFrameDecorator with x = 25, y = 25, width = 110,
-		// height = 110,
-		// and thickness = 10.
-		t = new ColourFrameDecorator(t, 25, 25, 110, 110, 10);
-
-		// Now lets draw the product on the screen
+		// GlassFrameDecorator info: x = 25, y = 25, width = 110, and height = 110
+		t = new ColourGlassDecorator(
+				new ColourFrameDecorator(new BorderDecorator(t, 30, 30, 100, 100), 25, 25, 110, 110, 10), 25, 25, 110,
+				110);
 		t.draw(g);
 	}
 
